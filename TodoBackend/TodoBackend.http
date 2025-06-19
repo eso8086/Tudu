@@ -1,28 +1,45 @@
 @URL = http://localhost:5009
 
-GET {{URL}}/todo
+GET {{URL}}/todos
 Accept: application/json
 
 ###
 
 
-POST {{URL}}/todo
+GET {{URL}}/todos/complete
+Accept: application/json
+
+###
+
+GET {{URL}}/todos/1
+Accept: application/json
+
+###
+
+
+
+POST {{URL}}/todos
 Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "My Task"
+  "name": "My Task 3"
 }
 
 ###
 
 
-PATCH {{URL}}/todo
+PUT {{URL}}/todos/3
 Accept: application/json
 Content-Type: application/json
 
 {
-  "id": 2
 }
+
+###
+
+
+DELETE {{URL}}/todos/3
+Accept: application/json
 
 ###
