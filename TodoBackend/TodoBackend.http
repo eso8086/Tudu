@@ -29,11 +29,13 @@ Content-Type: application/json
 ###
 
 
-PUT {{URL}}/todos/3
+PUT {{URL}}/todos/1
 Accept: application/json
 Content-Type: application/json
 
 {
+  "name": "Edited task name",
+  "isComplete": true
 }
 
 ###

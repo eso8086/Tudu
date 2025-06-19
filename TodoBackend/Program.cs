@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TodoBackend;
 
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TodoDb>(options => options.UseInMemoryDatabase("Todos"));
+builder.Services.AddDbContext<TodoDb>(options=>options.UseSqlite("Data Source=todos.db"));
 
 
 var app = builder.Build();
